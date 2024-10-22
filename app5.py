@@ -16,7 +16,7 @@ except FileNotFoundError:
     # Load the movie titles dataset
 #movie_titles = pd.read_csv(r"C:\Users\shadopc\Desktop\Projects\Movie reccommendation\Movie_Id_Titles.csv")
 movie_titles_url = "https://raw.githubusercontent.com/your-username/your-repo/main/Movie_Id_Titles.csv"
-response = requests.get(movies_titles_url)
+response = requests.get(movie_titles_url)
 movie_data = response.json()
 movie_titles = pd.DataFrame(movie_data)
 #except FileNotFoundError:
