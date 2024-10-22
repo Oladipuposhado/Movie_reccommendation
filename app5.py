@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import request
+import requests
 
 # Load the movie similarity matrix from the pickle file
 try:
