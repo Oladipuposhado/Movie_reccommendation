@@ -62,5 +62,5 @@ if st.button('Recommend'):
             for movie in recommended_movies:
                 st.write(movie)
 
-if __name__ == "__main__":
-    main.run()
+#if __name__ == "__main__":
+    #main.run()
