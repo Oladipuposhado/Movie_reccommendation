@@ -13,9 +13,9 @@ except FileNotFoundError:
 # Load the movie titles dataset
 #try:
     # Load the movie titles dataset
-movie_titles = pd.read_csv(r"C:\Users\shadopc\Desktop\Projects\Movie reccommendation\Movie_Id_Titles.csv")
-    #movie_titles_url = "https://raw.githubusercontent.com/your-username/your-repo/main/Movie_Id_Titles.csv"
-    #movie_titles = pd.read_csv(movie_titles_url)
+#movie_titles = pd.read_csv(r"C:\Users\shadopc\Desktop\Projects\Movie reccommendation\Movie_Id_Titles.csv")
+movie_titles_url = "https://raw.githubusercontent.com/your-username/your-repo/main/Movie_Id_Titles.csv"
+movie_titles = pd.read_csv(movie_titles_url)
 #except FileNotFoundError:
     #st.error("Movie titles CSV file not found.")
     #st.stop()
