@@ -12,21 +12,12 @@ except FileNotFoundError:
     st.stop()
 
 # Load the movie titles dataset
-#try:
-    # Load the movie titles dataset
-#movie_titles = pd.read_csv(r"C:\Users\shadopc\Desktop\Projects\Movie reccommendation\Movie_Id_Titles.csv")
-#movie_titles_url = "https://raw.githubusercontent.com/your-username/your-repo/main/Movie_Id_Titles.csv"
-#response = requests.get(movie_titles_url)
-#movie_data = response.json()
-#movie_titles = pd.DataFrame(movie_data)
 movie_dataset_url = "https://raw.githubusercontent.com/your-username/your-repo/main/Movie_Id_Titles.csv"
 response = requests.get(movie_dataset_url)
 with open('movie_dataset.csv', 'wb') as f:
     f.write(response.content)
 movie_titles = pd.read_csv('Movie_Id_Titles.csv')
-#except FileNotFoundError:
-    #st.error("Movie titles CSV file not found.")
-    #st.stop()
+
 
 # Map movie IDs to titles and vice versa
 try:
@@ -71,5 +62,5 @@ if st.button('Recommend'):
             for movie in recommended_movies:
                 st.write(movie)
 
-if __name__ == "__app__":
+if __name__ == "__main__":
     app.run()
