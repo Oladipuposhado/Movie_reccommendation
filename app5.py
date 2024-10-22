@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import request
 
 # Load the movie similarity matrix from the pickle file
 try:
@@ -15,7 +16,9 @@ except FileNotFoundError:
     # Load the movie titles dataset
 #movie_titles = pd.read_csv(r"C:\Users\shadopc\Desktop\Projects\Movie reccommendation\Movie_Id_Titles.csv")
 movie_titles_url = "https://raw.githubusercontent.com/your-username/your-repo/main/Movie_Id_Titles.csv"
-movie_titles = pd.read_csv(movie_titles_url)
+response = request.get(movies_titles_url)
+movie_data = response.json()
+movie_titles = pd.DataFrame(movie_data)
 #except FileNotFoundError:
     #st.error("Movie titles CSV file not found.")
     #st.stop()
