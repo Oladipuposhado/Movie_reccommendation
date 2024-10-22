@@ -23,7 +23,7 @@ movie_dataset_url = "https://raw.githubusercontent.com/your-username/your-repo/m
 response = requests.get(movie_dataset_url)
 with open('movie_dataset.csv', 'wb') as f:
     f.write(response.content)
-movie_titles = pd.read_csv('movie_dataset.csv')
+movie_titles = pd.read_csv('Movie_Id_Titles.csv')
 #except FileNotFoundError:
     #st.error("Movie titles CSV file not found.")
     #st.stop()
