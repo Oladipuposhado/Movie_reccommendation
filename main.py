@@ -63,4 +63,4 @@ if st.button('Recommend'):
                 st.write(movie)
 
 if __name__ == "__main__":
-    app.run()
+    main.run()
