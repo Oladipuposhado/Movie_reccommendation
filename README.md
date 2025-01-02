@@ -32,16 +32,15 @@ Clone the repository:
 git clone https://moviereccommendation.streamlit.git
 cd movie-recommendation-system
 
-
-
 Install dependencies:
 
 pip install -r requirements.txt
 
-Run the system:
+Run the Reccommender system:
 
-python app.py
-Run on the local system
+streamlit run main.py
+
+Open your browser and go to:
 https://moviereccommendation.streamlit.app
 
 Usage
